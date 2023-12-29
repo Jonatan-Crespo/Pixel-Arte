@@ -22,7 +22,6 @@ botaoCores.addEventListener('click', (event) => {
     }
     event = randomColors();
     setBackgroundColor(event);
-    console.log(event);
 });
 
 //Aplicação da cor e salvar no local storage
@@ -59,9 +58,16 @@ function createDiv() {
         }
     }
 }
-
 createDiv();
 
 //Selecionar as cores
-const selectColors = document.getElementsByClassName('color')
-selectColors.addEventListener('click', () => { })
+for (let index = 0; index < colors.length; index += 1) {
+    colors[index].addEventListener('click', (event) => {
+        const selected = document.querySelector('.selected');
+        if (selected) {
+            selected.classList.remove('selected');
+        }
+        event.target.classList.add('selected');
+    })
+}
+
