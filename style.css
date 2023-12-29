@@ -42,3 +42,20 @@
     /* border-radius: 100%; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.secundary-btn{
+    border: 2px solid #00952d;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #00952d;
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+
+.secundary-btn:hover{
+    background-color: rgb(215, 239, 228);
+}

@@ -71,3 +71,11 @@ for (let index = 0; index < colors.length; index += 1) {
     })
 }
 
+//Adicionar cores no quadro
+const div = document.getElementsByClassName('pixel');
+console.log(div);
+for (let i = 0; i < div.length; i++) {
+    div[i].addEventListener('click', (event)=>{
+        
+    })
+}
