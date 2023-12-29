@@ -1,0 +1,43 @@
+.color {
+    width: 48px;
+    height: 48px;
+    background-color: blue;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#buttom-random-color {
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #00952d;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+
+#buttom-random-color:hover {
+    background-color: darkgreen;
+}
+
+.linha {
+    width: 240px;
+    display: flex;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.selected {
+    border-color: red;
+    border-radius: 100%;
+}
