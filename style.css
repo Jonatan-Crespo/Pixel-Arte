@@ -1,11 +1,14 @@
+#color-palette div{
+    margin-bottom: 24px;
+    margin-right: 16px;
+    border-radius: 4px;
+}
+
 .color {
     width: 48px;
     height: 48px;
     background-color: blue;
     display: inline-block;
-    margin-right: 16px;
-    margin-bottom: 24px;
-    border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -20,6 +23,7 @@
     background-color: #00952d;
     cursor: pointer;
     margin-bottom: 64px;
+    margin-right: 16px;
 }
 
 #buttom-random-color:hover {
@@ -41,4 +45,21 @@
     border-color: red;
     /* border-radius: 100%; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#clear-board{
+    border: 2px solid #00952d;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #00952d;
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 64px;
+}
+
+#clear-board:hover {
+    background-color: rgb(200, 240, 220);
 }
