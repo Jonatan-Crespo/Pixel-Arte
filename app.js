@@ -7,9 +7,9 @@ const color3 = document.getElementById('color3');
 
 //botão random cores
 const botaoCores = document.getElementById('buttom-random-color');
-botaoCores.addEventListener('click', (event) => {
+botaoCores.addEventListener('click', () => {
     function randomColors() {
-        let colorsRandom = ['',];
+        let colorsRandom = [''];
         for (let i = 0; i < 3; i++) {
             const letters = '0123456789ABCDEF';
             let cor = '#';
@@ -20,36 +20,30 @@ botaoCores.addEventListener('click', (event) => {
         }
         return colorsRandom;
     }
-    event = randomColors();
-    setBackgroundColor(event);
-    // console.log(event);
+    // event = randomColors();
+    const randomColor = randomColors()
+    setBackgroundColor(randomColor);
 });
 
 //Aplicação da cor e salvar no local storage - Refatorado
 function setBackgroundColor(color) {
     for (let i = 1; i < colors.length; i += 1) {
         colors[i].style.backgroundColor = color[i];
-        localStorage.setItem('colorPallet', color)
+        localStorage.setItem('colorPallet', JSON.stringify(color));
     };
-    // console.log(color);
 }
 
-//Função antiga para aplicação da cor e salva no local storage
-// function setBackgroundColor(color) {
-//     color1.style.backgroundColor = color[0];
-//     color2.style.backgroundColor = color[1];
-//     color3.style.backgroundColor = color[2];
-//     localStorage.setItem('backgroundColor1', color[0]);
-//     localStorage.setItem('backgroundColor2', color[1]);
-//     localStorage.setItem('backgroundColor3', color[2]);
-// }
-
-// // Voltar as cores salvas no local Storage
-// const initialize = () => {
-//     const backgroundColor1 = localStorage.getItem('backgroundColor1');
-//     setBackgroundColor(backgroundColor1);  
-// }
-// initialize();
+// Voltar as cores salvas no local Storage
+function iniciative() {
+    const backgroundColor = JSON.parse(localStorage.getItem('colorPallet'));
+    color1.style.backgroundColor = backgroundColor[1];
+    color2.style.backgroundColor = backgroundColor[2];
+    color3.style.backgroundColor = backgroundColor[3];
+    // if (i = 1; i < backgroundColor.length; i += 1) {
+    //    colors.style.backgroundColor = backgroundColor[i];
+    // }
+}
+iniciative();
 
 //Criar as divs para o quadro 5x5
 function createDiv() {
