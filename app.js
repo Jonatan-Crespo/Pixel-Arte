@@ -89,13 +89,13 @@ for (let index = 0; index < pixel.length; index += 1) {
 }
 
 //Botão de limpar o quadro 5x5
-// const limpar = document.getElementById('clear-board');
-// limpar.addEventListener('click', (event) => {
-//     const pixel = document.querySelectorAll('.pixel');
-//     pixel.forEach(pixels => {
-//         pixels.style.backgroundColor = '';
-//     });
-// });
+const limpar = document.getElementById('clear-board');
+limpar.addEventListener('click', (event) => {
+    const pixel = document.querySelectorAll('.pixel');
+    pixel.forEach(pixels => {
+        pixels.style.backgroundColor = '';
+    });
+});
 
 //Salvar a quantidade do valor e alerta de menor que 5 e maior que 50.
 function inputQuadro() {
@@ -117,5 +117,3 @@ function inputQuadro() {
     }
 }
 inputQuadro();
-
-
