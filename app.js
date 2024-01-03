@@ -41,16 +41,18 @@ function iniciative() {
 }
 iniciative();
 
-//Criar as divs para o quadro 5x5
+//Criar as divs para o quadro 5x5 -- Adicionando o input de qndtidade de quadros
+let numbers = JSON.parse(localStorage.getItem('number'));
+
 function createDiv() {
     const section = document.getElementById('pixel-board');
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < numbers; i++) {
         const divLinha = document.createElement('div');
         divLinha.innerHTML = '';
         divLinha.className = 'linha';
         section.appendChild(divLinha);
 
-        for (let z = 0; z < 5; z++) {
+        for (let z = 0; z < numbers; z++) {
             const div = document.createElement('div');
             div.innerHTML = '';
             div.className = 'pixel';
@@ -94,3 +96,26 @@ for (let index = 0; index < pixel.length; index += 1) {
 //         pixels.style.backgroundColor = '';
 //     });
 // });
+
+//Salvar a quantidade do valor e alerta de menor que 5 e maior que 50.
+function inputQuadro() {
+    const generateBoard = document.getElementById('generate-board');
+    generateBoard.addEventListener('click', () => {
+        const textInput = parseInt(document.getElementById('board-size').value);
+
+        if (textInput < 5 || textInput > 50) {
+            alert('Por favor digite um número entre 5 e 50!');
+            return;
+        }
+
+        textInput = localStorage.setItem('number', JSON.stringify(textInput));
+    })
+
+    const storedValue = localStorage.getItem('number');
+    if (storedValue) {
+        document.getElementById('board-size').value = JSON.parse(storedValue);
+    }
+}
+inputQuadro();
+
+
