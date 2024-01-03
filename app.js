@@ -20,7 +20,6 @@ botaoCores.addEventListener('click', () => {
         }
         return colorsRandom;
     }
-    // event = randomColors();
     const randomColor = randomColors()
     setBackgroundColor(randomColor);
 });
@@ -33,15 +32,12 @@ function setBackgroundColor(color) {
     };
 }
 
-// Voltar as cores salvas no local Storage
+// Voltar as cores salvas no local Storage - Funciona só não é muito dinâmico.
 function iniciative() {
     const backgroundColor = JSON.parse(localStorage.getItem('colorPallet'));
     color1.style.backgroundColor = backgroundColor[1];
     color2.style.backgroundColor = backgroundColor[2];
     color3.style.backgroundColor = backgroundColor[3];
-    // if (i = 1; i < backgroundColor.length; i += 1) {
-    //    colors.style.backgroundColor = backgroundColor[i];
-    // }
 }
 iniciative();
 
@@ -50,7 +46,7 @@ function createDiv() {
     const section = document.getElementById('pixel-board');
     for (let i = 0; i < 5; i++) {
         const divLinha = document.createElement('div');
-        divLinha.innerHTML = '';;
+        divLinha.innerHTML = '';
         divLinha.className = 'linha';
         section.appendChild(divLinha);
 
@@ -72,9 +68,7 @@ for (let index = 0; index < colors.length; index += 1) {
             selected.classList.remove('selected');
         }
         event.target.classList.add('selected');
-        // return colors[index].style.backgroundColor;
     })
-    // console.log(colors[index]);
 }
 
 //Selecionar o uma div no quadro 5x5
@@ -87,15 +81,16 @@ for (let index = 0; index < pixel.length; index += 1) {
         if (selected) {
             event.target.style.backgroundColor = `${backgroundColorPaleta}`
         }
-        // JSON.parse(localStorage.setItem('pixelBoard', event));
+        console.log(event.target);
+        localStorage.setItem('pixelBoard', JSON.stringify(event.target));
     })
 }
 
 //Botão de limpar o quadro 5x5
-const limpar = document.getElementById('clear-board');
-limpar.addEventListener('click', (event) => {
-    const pixel = document.querySelectorAll('.pixel');
-    pixel.forEach(pixels => {
-        pixels.style.backgroundColor = '';
-    });
-});
+// const limpar = document.getElementById('clear-board');
+// limpar.addEventListener('click', (event) => {
+//     const pixel = document.querySelectorAll('.pixel');
+//     pixel.forEach(pixels => {
+//         pixels.style.backgroundColor = '';
+//     });
+// });
