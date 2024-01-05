@@ -12,10 +12,9 @@ Esse repositório tem como objetivo, criar um quadro com 4 cores (incluindo o pr
 1. **Clone o Repositório:** `git clone git@github.com:Jonatan-Crespo/Pixel-Arte.git`
 2. **Acesse o Diretório do Projeto:** `cd pixel-arte`
 3. **Abra o Aplicativo:** Abra o arquivo `index.html` no seu navegador web preferido.
-4. **Gere cores aleatórias** Clique no botão gerar cores, para gerar 3 cores aleatórias.
-5. **Defina o Tamanho do Quadro:** Escolha as dimensões do quadro para começar a criar sua arte.
-6. **Selecione as Cores:** Escolha dentro das quatro cores, incluindo o preto, para serem utilizadas na sua arte.
-7. **Crie sua Arte:** Use o mouse para desenhar no quadro, pixel a pixel.
+4. **Gere suas Cores:** Clique no botão *"cores aleatórias"*, para gerar 3 cores aleatórias, pode utilizar até gostar da paleta de cor.
+5. **Defina o Tamanho do Quadro:** Escolha a dimensão do quadro para começar a criar sua arte.
+6. **Crie sua Arte:** Use o mouse para selecionar as cores e desenhar no quadro, pixel a pixel.
 <br><br>
 
 ## 🎨 Exemplo de como ficou o projeto
