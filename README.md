@@ -15,7 +15,6 @@ Esse repositório tem como objetivo, criar um quadro com 4 cores (incluindo o pr
 4. **Defina o Tamanho do Quadro:** Escolha as dimensões do quadro para começar a criar sua arte.
 5. **Selecione as Cores:** Escolha até quatro cores, incluindo o preto, para serem usadas na sua arte.
 6. **Crie sua Arte:** Use o mouse ou o teclado para desenhar no quadro, pixel a pixel.
-7. **Salve sua Arte:** Ao terminar, salve a imagem gerada.
 <br><br>
 
 ## 🎨 Exemplo de como ficou o projeto
