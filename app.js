@@ -100,7 +100,7 @@ limpar.addEventListener('click', (event) => {
 //Salvar a quantidade do valor e alerta de menor que 5 e maior que 50.
 function inputQuadro() {
     const generateBoard = document.getElementById('generate-board');
-    generateBoard.addEventListener('click', () => {
+    generateBoard.addEventListener('click', (event) => {
         const textInput = parseInt(document.getElementById('board-size').value);
 
         if (textInput < 5 || textInput > 50) {
@@ -109,11 +109,12 @@ function inputQuadro() {
         }
 
         textInput = localStorage.setItem('number', JSON.stringify(textInput));
+        event.preventDefault();
     })
 
-    const storedValue = localStorage.getItem('number');
-    if (storedValue) {
-        document.getElementById('board-size').value = JSON.parse(storedValue);
-    }
+    // const storedValue = localStorage.getItem('number');
+    // if (storedValue) {
+    //     document.getElementById('board-size').value = JSON.parse(storedValue);
+    // }
 }
 inputQuadro();
